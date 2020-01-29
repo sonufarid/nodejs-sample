@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - echo "Installing"
+
+  pre_build:
+    commands:
+      - echo "Pre build"
+
+  build:
+    commands:
+      - echo "Build..."
+      - grep -q "Congratulations" index.html
+
+  post_build:
+    commands:
+      - echo "And we are done"
